@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zzz Page</title>
+
+        </head>
+        <body>
+
+                <h1 style="font-family:courier;">Player Name: {{ player.player_name }}</h1> <br />
+                {% for x in player %}
+                <p style="font-family:courier;"><b>{{ x.replace('_', ' ') }}</b> = {{player[x]}}</p>
+                    <br />
+                {% endfor %}
+        </body>
+</html>

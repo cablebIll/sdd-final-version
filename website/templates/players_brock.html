@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>zzz Page</title>
+        </head>
+        <body>
+
+            {% for player in content.players -%}
+                Player Name: <a href="{{'http://127.0.0.1:5000/players/' + player.player_name}}">{{ player.player_name }}</a> <br />
+            {% endfor %}
+
+        </body>
+</html>
