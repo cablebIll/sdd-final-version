@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Rankings{% endblock %}
+{% for team in rankings %}
+<p>Team Name:{{ team_name}}<br />Regional Ranking:{{team_rank}}<br />Team Rating: {{rating_score}}
+{% endfor %}

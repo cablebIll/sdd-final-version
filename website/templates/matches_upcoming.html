@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Upcoming Matches{% endblock %}
+{% block content %}
+<h1>Current/Upcoming Matches</h1>
+{% for match in matches.matches %}
+<p><b>Teams:</b> <i>{{match.team_one_name}}</i> VS <i>{{match.team_two_name}}</i><br />
+    <b>Event Name:</b> {{match.event_name}}<br />
+    <b>Match Time:</b> {{match.match_time}} London Time<br />
+    <b>Match Starts in:</b> {{match.eta}}{% if match.eta =='' %} Match in progress {% endif %}
+{% endfor %}
+{% endblock %}

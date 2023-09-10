@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Rankings{% endblock %}
+{% block content %}
+<h1>Ranking by Region</h1>
+{% for region in regions %}
+<ul>
+<li><a href="http://127.0.0.1:5000/rankings/{{region}}">{{region}}</a></li>
+</ul>
+{% endfor %}
+{% endblock %}

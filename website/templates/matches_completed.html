@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Completed Matches{% endblock %}
+{% block content %}
+<h1>Completed Matches</h1>
+{% for match in matches.matches %}
+<p><b>Teams:</b> <i>{{match.team_one_name}}</i> VS <i>{{match.team_two_name}}</i><br />
+    <b>Score:</b> {{match.team_one_score}}:{{match.team_two_score}}<br />
+    <b>Event Name:</b> {{match.event_name}}<br />
+    <b>Match Time:</b> {{match.match_time}} London Time<br />
+    <b>Match Starts in:</b>Match Already Finished
+{% endfor %}
+{% endblock %}

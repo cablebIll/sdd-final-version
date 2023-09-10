@@ -1,18 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}Players{% endblock %}
 {% block content %}
-<form method="GET">
-  <h3 align="center">Player Search</h3>
-  <div class="form-group">
-    <label>Player Name</label>
-    <input
-      type="text"
-      class="form-control"
-      id="player_name"
-      name="player_name"
-      placeholder="Enter Name"
-    />
-  </div>
-    <button type="submit" class="btn btn-primary">Search</button>
-</form>
+<h1>Players</h1>
+{% for player in content.players %}
+    Player Name: <a href="{{'http://127.0.0.1:5000/players/' + player.player_name}}">{{ player.player_name }}</a> <br />
+{% endfor %}
 {% endblock %}

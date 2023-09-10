@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Player{% endblock %}
+{% block content %}
+                <h1 style="font-family:Arial;">Player Name: {{ player.player_name }}</h1> <br />
+                {% for x in player %}
+                <p style="font-family:arial;"><b>{{ x.replace('_', ' ') }}</b> = {{player[x]}}</p>
+                    <br />
+                {% endfor %}
+{% endblock %}
+        </body>
+</html>
