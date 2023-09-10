@@ -2,15 +2,15 @@ from flask import Blueprint, render_template
 import requests
 from functools import cache
 
-views = Blueprint('views', __name__)
+views = Blueprint('views', __name__)  # creates blueprint
 
 
 @cache
-@views.route('/players/')
+@views.route('/players/')  # url ending of function
 def players():
-    response = requests.get("https://vlrgg.cyclic.app/api/players")
-    players = response.json()
-    return render_template('players.html', content=players)
+    response = requests.get("https://vlrgg.cyclic.app/api/players")  # gets data from API
+    players = response.json()  # means data is read and then put into a dict
+    return render_template('players.html', content=players)  # passes dict into render_template
 
 
 @views.route("/players/<name>")
@@ -24,16 +24,16 @@ def player(name):
     return render_template('player.html', player=our_player)
 
 
-#@views.route('/rankings/<name>')
-#def rankings(name):
+# @views.route('/rankings/<name>')
+# def rankings(name):
 #    response = requests.get("https://vlrgg.cyclic.app/api/rankings/<name>")
 #    rankings = response.json()
 #    print(rankings)
 #    return render_template('rankings.html', rankings=rankings)
 
 
-#@views.route('/rankings')
-#def rankings_home():
+# @views.route('/rankings')
+# def rankings_home():
 #    regions = ('korea', 'europe', 'north-america', 'brazil', 'asia-pacific',
 #               'latin-america', 'oceania', 'mena', 'china', 'japan', 'gc', 'la-s',
 #               'la-n')
