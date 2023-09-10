@@ -24,20 +24,20 @@ def player(name):
     return render_template('player.html', player=our_player)
 
 
-@views.route('/rankings/<name>')
-def rankings(name):
-    response = requests.get("https://vlrgg.cyclic.app/api/rankings/<name>")
-    rankings = response.json()
-    print(rankings)
-    return render_template('rankings.html', rankings=rankings)
+#@views.route('/rankings/<name>')
+#def rankings(name):
+#    response = requests.get("https://vlrgg.cyclic.app/api/rankings/<name>")
+#    rankings = response.json()
+#    print(rankings)
+#    return render_template('rankings.html', rankings=rankings)
 
 
-@views.route('/rankings')
-def rankings_home():
-    regions = ('korea', 'europe', 'north-america', 'brazil', 'asia-pacific',
-               'latin-america', 'oceania', 'mena', 'china', 'japan', 'gc', 'la-s',
-               'la-n')
-    return render_template('rankings_home.html', regions=regions)
+#@views.route('/rankings')
+#def rankings_home():
+#    regions = ('korea', 'europe', 'north-america', 'brazil', 'asia-pacific',
+#               'latin-america', 'oceania', 'mena', 'china', 'japan', 'gc', 'la-s',
+#               'la-n')
+#    return render_template('rankings_home.html', regions=regions)
 
 
 @views.route('/events')

@@ -7,5 +7,6 @@
     <b>Event Name:</b> {{match.event_name}}<br />
     <b>Match Time:</b> {{match.match_time}} London Time<br />
     <b>Match Starts in:</b> {{match.eta}}{% if match.eta =='' %} Match in progress {% endif %}
+    <hr>
 {% endfor %}
 {% endblock %}
